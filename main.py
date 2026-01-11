@@ -15,9 +15,14 @@ def turn_left():
 def turn_right():
     t.right(10)
 
+def reset():
+    t.clear()
+    t.goto(0,0)
+
 screen.listen()
 screen.onkey(move_forwards, "w")
 screen.onkey(move_backwards, "s")
 screen.onkey(turn_left, "a")
 screen.onkey(turn_right, "d")
+screen.onkey(reset, "c")
 screen.exitonclick()
